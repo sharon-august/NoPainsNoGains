@@ -20,8 +20,9 @@ H转B：一分四法
 位数 | 8 | 7 | 6 | 5 | 4 | 3 | 2 | 1 |
 ---- |---- |---- |---- |---- |---- |---- |---- |---- |
 B | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
-D | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |  
-对照表拆分。e.g. 135D = 128D + 7D = 128D + 4D + 2D + 1D = 1000 0111B
+D | 128 | 64 | 32 | 16 | 8 | 4 | 2 | 1 |
+
+对照上表拆分。e.g. 135D = 128D + 7D = 128D + 4D + 2D + 1D = 1000 0111B
 
 参考：[计算机基础进制转换（二进制、八进制、十进制、十六进制）](https://blog.csdn.net/yuanxiang01/article/details/82503568?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase)
 
