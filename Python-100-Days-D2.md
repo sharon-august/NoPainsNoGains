@@ -36,6 +36,7 @@ e.g. -5D = 11111111 11111111 11111111 11111011B = ff ff ff fbH
 参考：[十进制负数转二进制](https://blog.csdn.net/LaoXiangQ/article/details/86645513)
 
 
+
 ## 二、语言元素
 ### 1.逻辑运算符的使用
 输入年份判断是否为闰年  
@@ -47,17 +48,18 @@ print('闰年：', is_leap)
 ```
 
 ### 2.常用函数
-* input()
+* input()  
 input('a = ') 显示引号内的内容，读取键盘输入的内容为字符串，以回车键结束
 
-* print()
+* print()  
 print('%.1f华氏度 = %.1f摄氏度' % (F_deg, C_deg))输出带占位符的字符串，保留1位小数  
 print('%d %% %d = %d' % (a, b, a % b)) **取余**  
 print('%d // %d = %d' % (a, b, a // b)) **整除**  
-**占位符：%d整数，%f小数
+**占位符：%d整数，%f小数**  
+flag2 = 2 < 1;print(flag2 is not False)打印表达式的结果False（is为身份运算符）
 
 * int()：将一个数值或字符串转换成整数，可以指定进制  
-能把str型'17'转换为整数17，但不能把字母a转为ASCII码97。
+能把str型'17'转换为整数17，但不能把字母a转为ASCII码97
 
 * float()：将一个字符串转换成浮点数  
 * str()：将指定的对象转换成字符串形式，可以指定编码  
@@ -65,3 +67,11 @@ print('%d // %d = %d' % (a, b, a // b)) **整除**
 * ord()：将字符串（一个字符）转换成对应的编码（整数）  
 
 [运算符及优先级表](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/02.%E8%AF%AD%E8%A8%80%E5%85%83%E7%B4%A0.md)
+
+扩展：[Python将'\u'开头的字符串转为unicode编码](https://blog.csdn.net/xw_classmate/article/details/51935105)  
+[汉字转化unicode编码在线工具](http://www.bangnishouji.com/tools/chtounicode.html)  
+```
+str3 = '\u6768\u7ecd\u7eaf'
+print(str3)
+# 输出：杨绍纯
+```
