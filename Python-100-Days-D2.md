@@ -35,3 +35,13 @@ e.g. -5D = 11111111 11111111 11111111 11111011B = ff ff ff fbH
 （2）B转D：符号位为1的二进制数，末位减1，除符号位外各位取反，得到原码，再转为十进制。  
 参考：[十进制负数转二进制](https://blog.csdn.net/LaoXiangQ/article/details/86645513)
 
+
+## 二、语言元素
+### 1.逻辑运算符的使用
+输入年份判断是否为闰年
+`<
+year = int(input('请输入年份：'))
+is_leap = year % 4 == 0 and year % 100 != 0 or year % 400 == 0
+print('闰年：', is_leap)
+# 2005只用D1（and左边是false，短路处理），2020用到D2（or左边是true，短路处理）, 1900和2000用到D3
+>`
