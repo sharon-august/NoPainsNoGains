@@ -16,6 +16,7 @@ if 90 <= score <= 100:而不是if score <= 100 and score >= 90:
 提示用户输入一个密码且不会回显。 用户会看到字符串 prompt 作为提示，其默认值为 'Password: '。 在 Unix 上，如有必要提示会使用替换错误句柄写入到文件类对象 stream。 stream 默认指向控制终端 (/dev/tty)，如果不可用则指向 sys.stderr (此参数在 Windows 上会被忽略)。  
 e.g. import getpass  
 ...  
-password = getpass.getpass("请输入密码：")
+password = getpass.getpass("请输入密码：")  
+（貌似没什么用，而且Warning: Password input may be echoed.）
 
 参考：[Python3.7文档](https://docs.python.org/3.7/)
