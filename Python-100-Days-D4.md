@@ -26,15 +26,36 @@ e.g. range(i, j) produces i, i+1, i+2, ..., j-1.
 start defaults to 0, and stop is omitted! range(4) produces 0, 1, 2, 3.  
 range(100, 0, -2)：产生100到1的偶数，其中-2是步长，即每次数字递减的值。
 
-for i in range(row)：range内是几就执行几遍。但i比实际次数小1，数学运算时应该+1，嵌套循环以i为参数时也应该+1  
-e.g.1  
-for i in range(row):  
-    for _ in range(row - i - 1):  
+for i in range(n)：range内是几就循环几遍。但i比实际次数小1，数学运算时应该+1，嵌套循环以i为range内参数时也应该i+1  
+e.g.1
+```
+for i in range(row):
+    for _ in range(row - i - 1):
+        print(' ', end='')
+    for _ in range(2 * i + 1):
+        print('*', end='')
+    print()
+# 每行：先打row - i - 1个空，再打2 * i + 1个*
+
+for i in range(row):
+    for j in range(row):
+        if j < row - i - 1:
+            print(' ', end='')
+        else:
+            print('*', end='')
+    print()
+# 每行：先打row - i - 1个空，再把余下的打满*
+# i，j都比实际次数小1
+```
 （for j in range(row - i - 1) 与 if (0 <= ) j < row - i - 1等效）  
 e.g.2  
-for i in range(row):  
-    for _ in range(i + 1):  
-[参见：打印各种三角形图案](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/code/Day04/for6.py)
+```
+for i in range(row):
+    for _ in range(i + 1):
+        print('*', end='')
+    print()  # 若注释掉此行，则结果不换行不显示，只会在下一次input首端显示
+```
+[参见典型例题：打印各种三角形图案](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/code/Day04/for6.py)
 
 
 2.交换：x, y = y, x 或 (x, y) = (y, x)
