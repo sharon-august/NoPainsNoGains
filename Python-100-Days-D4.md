@@ -1,5 +1,5 @@
 ## 循环结构
-1.类型：for-in循环和while循环 
+1.类型：for-in循环和while循环  
 for _ in range(n)中 _ 占位符,表示不在意变量的值 只是用于循环遍历n次，无法打印变量值。  
 for i in range(n) 在意变量i的值 可以打印print(i)  
 例如在一个序列中只想取头和尾，就可以使用_  
@@ -26,7 +26,18 @@ e.g. range(i, j) produces i, i+1, i+2, ..., j-1.
 start defaults to 0, and stop is omitted! range(4) produces 0, 1, 2, 3.  
 range(100, 0, -2)：产生100到1的偶数，其中-2是步长，即每次数字递减的值。
 
-2.交换：x, y = y, x
+for i in range(row)：range内是几就执行几遍。但i比实际次数小1，数学运算时应该+1，嵌套循环以i为参数时也应该+1  
+e.g.1  
+for i in range(row):  
+    for _ in range(row - i - 1):  
+（for j in range(row - i - 1) 与 if (0 <= ) j < row - i - 1等效）  
+e.g.2  
+for i in range(row):  
+    for _ in range(i + 1):  
+[参见：打印各种三角形图案](https://github.com/jackfrued/Python-100-Days/blob/master/Day01-15/code/Day04/for6.py)
+
+
+2.交换：x, y = y, x 或 (x, y) = (y, x)
 
 #### pycharm快捷键
 Ctrl+Q：调出快速文档  
