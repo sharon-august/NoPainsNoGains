@@ -21,10 +21,12 @@ continue：放弃本次循环后续的代码直接让循环进入下一轮。
 思路：从较小的数开始除，能整除的就是最大公约数，最小公倍数=x * y//最大公约数。没有公约数时，最大公约数为1，最小公倍数为x * y。
 
 #### 常用函数及语法
-1.range: a sequence of integers from start (inclusive) to stop (exclusive) by step.  
+##### 1.range: a sequence of integers from start (inclusive) to stop (exclusive) by step.  
 e.g. range(i, j) produces i, i+1, i+2, ..., j-1.  
 start defaults to 0, and stop is omitted! range(4) produces 0, 1, 2, 3.  
-range(100, 0, -2)：产生100到1的偶数，其中-2是步长，即每次数字递减的值。
+range(100, 0, -2)：产生100到1的偶数，其中-2是步长，即每次数字递减的值。  
+
+for m in range(2, n):  # n=2时此循环不会执行
 
 for i in range(n)：range内是几就循环几遍。但i比实际次数小1，数学运算时应该+1，嵌套循环以i为range内参数时也应该i+1  
 e.g.1
@@ -59,10 +61,3 @@ for i in range(row):
 
 
 2.交换：x, y = y, x 或 (x, y) = (y, x)
-
-#### pycharm快捷键
-Ctrl+Q：调出快速文档  
-三击：选中整行  
-Shift+Alt+E：在console中执行选中内容  
-Shift+F6或Ctrl+Shift+Alt+J：批量修改变量名  
-Ctrl+F12：变量导航
